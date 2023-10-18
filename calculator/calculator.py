@@ -18,3 +18,9 @@ def divide(n1, n2):
     """Divides a number by another number."""
     return n1/n2
 
+operations = {
+    "+": add,
+    "-": subtract,
+    "*": multiply,
+    "/": divide,
+    }
