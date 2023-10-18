@@ -35,3 +35,9 @@ function = operations[op]
 answer = function(num1, num2)
 
 print(f"{num1} {op} {num2} = {answer}")
+
+op = input("Pick another operation: ")
+num3 = int(input("What's the next number?: "))
+function = operations[op]
+next_answer = function(answer, num3)
+print(f"{answer} {op} {num3} = {next_answer}")
