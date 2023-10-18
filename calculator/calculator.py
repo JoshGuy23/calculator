@@ -30,6 +30,7 @@ operations = {
 
 # Main calculator function
 def calculator():
+    """Main calculator function to perform calculations for the user."""
     print(art.logo)
     calculating = True  # Used for the while loop
     
