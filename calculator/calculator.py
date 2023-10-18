@@ -30,25 +30,16 @@ calculating = True
 num1 = int(input("What's the first number?: "))
 for symbol in operations:
     print(symbol)
-op = input("Pick an operation from the line above: ")
-num2 = int(input("What's the second number?: "))
-
-function = operations[op]
-answer = function(num1, num2)
-
-print(f"{num1} {op} {num2} = {answer}")
-
-cont = input(f"Type 'y' to continue calculating with {answer}, or type 'n' to exit: ").lower()
-if cont != "y":
-    calculating = False
-
 while calculating:
-    op = input("Pick another operation: ")
-    num3 = int(input("What's the next number?: "))
+    op = input("Pick an operation")
+    num2 = int(input("What's the second number?: "))
+
     function = operations[op]
-    next_answer = function(answer, num3)
-    print(f"{answer} {op} {num3} = {next_answer}")
-    cont = input(f"Type 'y' to continue calculating with {next_answer}, or type 'n' to exit: ").lower()
-    answer = next_answer
+    answer = function(num1, num2)
+
+    print(f"{num1} {op} {num2} = {answer}")
+    num1 = answer
+
+    cont = input(f"Type 'y' to continue calculating with {answer}, or type 'n' to exit: ").lower()
     if cont != "y":
         calculating = False
