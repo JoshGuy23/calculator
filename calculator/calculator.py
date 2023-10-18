@@ -44,3 +44,5 @@ def calculator():
         cont = input(f"Type 'y' to continue calculating with {answer}, or type 'n' to exit: ").lower()
         if cont != "y":
             calculating = False
+            
+calculator()
