@@ -32,12 +32,12 @@ def calculator():
         print(symbol)
 
     while calculating:
-        op = input("Pick an operation")
+        op = input("Pick an operation: ")
         num2 = float(input("What's the second number?: "))
         
         if op == "/" and num2 == 0:
             print("Error: dividing by 0.")
-            break
+            return 'q'
 
         function = operations[op]
         answer = function(num1, num2)
