@@ -1,7 +1,5 @@
 import art
 
-print(art.logo)
-
 def add(n1, n2):
     """Adds two numbers together."""
     return n1+n2
@@ -25,21 +23,24 @@ operations = {
     "/": divide,
     }
 
-calculating = True
+def calculator():
+    print(art.logo)
+    calculating = True
 
-num1 = int(input("What's the first number?: "))
-for symbol in operations:
-    print(symbol)
-while calculating:
-    op = input("Pick an operation")
-    num2 = int(input("What's the second number?: "))
+    num1 = int(input("What's the first number?: "))
+    for symbol in operations:
+        print(symbol)
 
-    function = operations[op]
-    answer = function(num1, num2)
+    while calculating:
+        op = input("Pick an operation")
+        num2 = int(input("What's the second number?: "))
 
-    print(f"{num1} {op} {num2} = {answer}")
-    num1 = answer
+        function = operations[op]
+        answer = function(num1, num2)
 
-    cont = input(f"Type 'y' to continue calculating with {answer}, or type 'n' to exit: ").lower()
-    if cont != "y":
-        calculating = False
+        print(f"{num1} {op} {num2} = {answer}")
+        num1 = answer
+
+        cont = input(f"Type 'y' to continue calculating with {answer}, or type 'n' to start a new calculation: ").lower()
+        if cont != "y":
+            calculating = False
