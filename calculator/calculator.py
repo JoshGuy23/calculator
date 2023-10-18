@@ -27,13 +27,17 @@ def calculator():
     print(art.logo)
     calculating = True
 
-    num1 = int(input("What's the first number?: "))
+    num1 = float(input("What's the first number?: "))
     for symbol in operations:
         print(symbol)
 
     while calculating:
         op = input("Pick an operation")
-        num2 = int(input("What's the second number?: "))
+        num2 = float(input("What's the second number?: "))
+        
+        if op == "/" and num2 == 0:
+            print("Error: dividing by 0.")
+            break
 
         function = operations[op]
         answer = function(num1, num2)
