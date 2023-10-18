@@ -45,8 +45,12 @@ def calculator():
         print(f"{num1} {op} {num2} = {answer}")
         num1 = answer
 
-        cont = input(f"Type 'y' to continue calculating with {answer}, or type 'n' to exit: ").lower()
+        cont = input(f"Type 'y' to continue calculating with {answer}, 'n' to clear calculations, or 'q' to quit: ").lower()
         if cont != "y":
             calculating = False
+    return cont
             
-calculator()
+while True:
+    status = calculator()
+    if status == 'q':
+        break
