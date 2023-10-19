@@ -1,4 +1,5 @@
 import art
+import os
 
 # Add
 def add(n1, n2):
@@ -20,12 +21,18 @@ def divide(n1, n2):
     """Divides a number by another number."""
     return n1/n2
 
+# Modulo
+def modulo(n1, n2):
+    """Gives the remainder of a division."""
+    return n1 % n2
+
 # Stores the above functions in a dictionary
 operations = {
     "+": add,
     "-": subtract,
     "*": multiply,
     "/": divide,
+    "%": modulo,
     }
 
 # Main calculator function
@@ -60,6 +67,7 @@ def calculator():
         # Ask the user whether to continue the current calculation, start a new one, or quit the program.
         cont = input(f"Type 'y' to continue calculating with {answer}, 'n' to clear calculations, or 'q' to quit: ").lower()
         if cont != "y":
+            os.system('cls' if os.name=='nt' else 'clear')
             calculating = False
     return cont
  
