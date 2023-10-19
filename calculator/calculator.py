@@ -26,6 +26,11 @@ def modulo(n1, n2):
     """Gives the remainder of a division."""
     return n1 % n2
 
+# Exponentiation
+def exponent(n1, n2):
+    """Raises a number to the power of the second number."""
+    return n1 ** n2
+
 # Stores the above functions in a dictionary
 operations = {
     "+": add,
@@ -33,6 +38,7 @@ operations = {
     "*": multiply,
     "/": divide,
     "%": modulo,
+    "^": exponent,
     }
 
 # Main calculator function
